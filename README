@@ -1,0 +1,5 @@
+Minha apresentação sobre o Spring Integration 2.x está disponível em: http://www.yanaga.com.br/2011/12/minha-apresentacao-sobre-spring.html
+
+Para executar, é necessário fornecer suas credenciais do AWS e um bucket do S3 da sua conta no arquivo src/main/resources/META-INF/spring/aws.properties
+
+Bom proveito!
