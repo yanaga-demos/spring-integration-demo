@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html">
+	<h:head>
+		<title>JavaOne Brazil 2011 - Spring Integration Demo</title>
+	</h:head>
+	<h:body>
+		<div id="main" style="text-align: center;">
+			<h:form prependId="false">
+				<p:panel
+					header="JavaOne Brazil 2011 - Spring Integration 2.x Demo on AWS"
+					style="text-align: center;">
+					<p:dataGrid var="image" value="#{imageController.images}"
+						columns="6" rows="18" paginator="true" effect="true"
+						paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+						rowsPerPageTemplate="9,12,15">
+						<p:column>
+							<p:graphicImage value="http://javaone.yanaga.com.br/#{image}" />
+						</p:column>
+					</p:dataGrid>
+					<ui:remove>
+						<p:galleria var="image" value="#{imageController.images}"
+							effect="slide" effectSpeed="1000" panelWidth="100"
+							panelHeight="100" frameWidth="90" frameHeight="90"
+							filmstripPosition="top">
+							<p:graphicImage value="http://javaone.yanaga.com.br/#{image}" />
+						</p:galleria>
+					</ui:remove>
+				</p:panel>
+			</h:form>
+		</div>
+	</h:body>
+</f:view>
+</html>
